@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%t] %highlight%p %logger{0} %M %L - %m %n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE_LOG"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+        </filter>
+
+        <file>/Users/liliangyu/log/eureka-server/eureka-server.%d{yyyy-MM-dd}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/liliangyu/log//eureka-server/eureka-server.%d{yyyy-MM-dd}.zip
+            </fileNamePattern>
+            <maxHistory>100</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d [%t] %highlight%p %logger{0} %M %L - %m %n</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE_LOG"/>
+    </root>
+</configuration>

@@ -1,0 +1,44 @@
+spring:
+  profiles: default
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:10010/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+server:
+  port: 10010
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
+---
+spring:
+  profiles: peer1
+  application:
+     name: eureka-server-cluster
+server:
+  port: 10011
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:10012/eureka/,http://peer1:10011/eureka/
+---
+spring:
+  profiles: peer2
+  application:
+    name: eureka-server-cluster
+server:
+  port: 10012
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer2:10012/eureka/,http://peer1:10011/eureka/

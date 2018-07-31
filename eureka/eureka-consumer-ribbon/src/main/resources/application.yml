@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-consumer-ribbon
+server:
+  port: 10022
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:10010/eureka/
+#  instance:
+#    prefer-ip-address: true

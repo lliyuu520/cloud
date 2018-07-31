@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-consumer-feign
+server:
+  port: 10023
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:10010/eureka/
+feign:
+  compression:
+    request:
+      e
+#  instance:
+#    prefer-ip-address: true
