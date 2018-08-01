@@ -1,4 +1,4 @@
-package com.liliangyu.springcloud.eurekaconsumerfeign.controller;
+package com.liliangyu.springcloud.eurekaconsumerfeignhystrix.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

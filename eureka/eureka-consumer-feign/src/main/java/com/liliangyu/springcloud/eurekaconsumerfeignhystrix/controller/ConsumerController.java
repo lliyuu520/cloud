@@ -1,6 +1,6 @@
-package com.liliangyu.springcloud.eurekaconsumerfeign.controller;
+package com.liliangyu.springcloud.eurekaconsumerfeignhystrix.controller;
 
-import com.liliangyu.springcloud.eurekaconsumerfeign.feign.client.ConsumerFeignClient;
+import com.liliangyu.springcloud.eurekaconsumerfeignhystrix.feign.client.ConsumerFeignClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

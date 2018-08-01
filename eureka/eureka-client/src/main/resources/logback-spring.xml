@@ -11,9 +11,9 @@
             <level>DEBUG</level>
         </filter>
 
-        <file>/Users/liliangyu/log//eureka-client/eureka-client.log</file>
+        <file>/home/liliangyu/log/eureka-client/eureka-client.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/Users/liliangyu/log//eureka-client/eureka-client.%d{yyyy-MM-dd}.zip
+            <fileNamePattern>/home/liliangyu/log/eureka-client/eureka-client.%d{yyyy-MM-dd}.zip
             </fileNamePattern>
             <maxHistory>100</maxHistory>
         </rollingPolicy>

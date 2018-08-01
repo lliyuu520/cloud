@@ -1,4 +1,4 @@
-package com.liliangyu.springcloud.eurekaconsumerfeign;
+package com.liliangyu.springcloud.eurekaconsumerfeignhystrix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
