@@ -12,7 +12,7 @@ eureka:
 spring:
   profiles: test
   application:
-    name: eureka-consumer
+    name: eureka-consumer-test
 server:
   port: 10021
 eureka:
