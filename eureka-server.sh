@@ -2,14 +2,11 @@
 #这里可替换为你自己的执行程序，其他代码无需更改
 cd eureka/eureka-server/target
 APP_NAME="eureka-server.jar"
-pwd
-
 #使用说明，用来提示输入参数
 usage() {
     echo "Usage: sh 执行脚本.sh [start|stop|restart|status]"
     exit 1
 }
-
 #检查程序是否在运行
 is_exist(){  
       
@@ -28,7 +25,7 @@ start(){
   if [ $? -eq "0" ]; then
     echo "${APP_NAME} is already running. pid=${pid} ."
   else
-    nohup java -Xms512m -Xmx624m -jar $APP_NAME &
+    nohup java -Xms512m -Xmx624m -jar eureka/eureka-server/target/eureka-server.jar &
   fi
 }
 
