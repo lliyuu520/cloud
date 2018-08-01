@@ -1,6 +1,7 @@
 #!/bin/bash
 #这里可替换为你自己的执行程序，其他代码无需更改
-APP_NAME="eureka/eureka-server/target/*.jar"
+cd eureka/eureka-server/target
+APP_NAME="eureka-server.jar"
 
 #使用说明，用来提示输入参数
 usage() {
@@ -26,7 +27,7 @@ start(){
   if [ $? -eq "0" ]; then
     echo "${APP_NAME} is already running. pid=${pid} ."
   else
-    nohup java -Xms512m -Xmx624m -jar $APP_NAME &
+    nohup java -Xms512m -Xmx624m -jar $APP_NAME
   fi
 }
 
