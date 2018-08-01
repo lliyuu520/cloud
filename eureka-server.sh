@@ -25,7 +25,7 @@ start(){
   if [ $? -eq "0" ]; then
     echo "${APP_NAME} is already running. pid=${pid} ."
   else
-    nohup java -Xms512m -Xmx624m -jar eureka/eureka-server/target/eureka-server.jar &
+    nohup java -Xms512m -Xmx624m -jar $APP_NAME &
   fi
 }
 
