@@ -7,7 +7,9 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://root:root@localhost:${server.port}/eureka/
+      defaultZone: http://root:root@localhost:10010/eureka/
+#    fetch-registry: false
+#    register-with-eureka: false
 ---
 spring:
   profiles: test
@@ -18,5 +20,5 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://root:root@192.168.17.238:${server.port}/eureka/
+      defaultZone: http://root:root@192.168.17.238:10010/eureka/
 
