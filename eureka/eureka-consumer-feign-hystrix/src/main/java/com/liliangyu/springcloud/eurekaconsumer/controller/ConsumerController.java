@@ -1,6 +1,7 @@
-package com.liliangyu.springcloud.eurekaconsumerfeignhystrix.controller;
+package com.liliangyu.springcloud.eurekaconsumer.controller;
 
-import com.liliangyu.springcloud.eurekaconsumerfeignhystrix.feign.client.ConsumerFeignClient;
+import com.liliangyu.springcloud.eurekaconsumer.feign.client.ConsumerFeignClient;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,15 @@ public class ConsumerController {
 
     @Autowired
     Environment environment;
-
-    @GetMapping("feign")
+@HystrixCommand(fallbackMethod ="back" )
+    @GetMapping("feign/hystrix")
     public String getOne() {
         LOGGER.info("environment"+environment.getProperty("server.port"));
         String one = consumerFeignClient.getOne();
         return one;
+    }
+
+    public String back(){
+        return "back";
     }
 }

@@ -1,4 +1,4 @@
-package com.liliangyu.springcloud.eurekaconsumerfeignhystrix.feign.client;
+package com.liliangyu.springcloud.eurekaconsumer.feign.client;
 
 import org.springframework.stereotype.Component;
 

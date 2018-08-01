@@ -5,7 +5,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://root:root@192.168.17.238:10010/eureka/
+      defaultZone: http://root:root@localhost:${server.port}/eureka/
     register-with-eureka: false
     fetch-registry: false
 server:
@@ -18,27 +18,20 @@ security:
     password: root
 ---
 spring:
-  profiles: peer1
+  profiles: test
   application:
-     name: eureka-server-cluster
-server:
-  port: 10011
+    name: eureka-server
 eureka:
-  instance:
-    hostname: peer1
   client:
     service-url:
-      defaultZone: http://peer2:10012/eureka/,http://peer1:10011/eureka/
----
-spring:
-  profiles: peer2
-  application:
-    name: eureka-server-cluster
+      defaultZone: http://root:root@192.168.17.238:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
 server:
-  port: 10012
-eureka:
-  instance:
-    hostname: peer2
-  client:
-    service-url:
-      defaultZone: http://peer2:10012/eureka/,http://peer1:10011/eureka/
+  port: 10010
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root

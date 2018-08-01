@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <property name="MODULE_NAME" value="eureka-consumer"/>
+    <property name="LOG_PATH" value="/logs"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d [%t] %highlight%p %logger{0} %M %L - %m %n</pattern>
@@ -11,9 +13,9 @@
             <level>DEBUG</level>
         </filter>
 
-        <file>/home/liliangyu/log/eureka-client/eureka-client.log</file>
+        <file>${LOG_PATH}/${MODULE_NAME}/${MODULE_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/home/liliangyu/log/eureka-client/eureka-client.%d{yyyy-MM-dd}.zip
+            <fileNamePattern>${LOG_PATH}/${MODULE_NAME}/${MODULE_NAME}.%d{yyyy-MM-dd}.zip
             </fileNamePattern>
             <maxHistory>100</maxHistory>
         </rollingPolicy>

@@ -1,4 +1,4 @@
-package com.liliangyu.springcloud.eurekaconsumerfeignhystrix.feign.client;
+package com.liliangyu.springcloud.eurekaconsumer.feign.client;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,12 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description feignClient
  * @date 2018/7/31
  */
-@FeignClient("eureka-client")
+@FeignClient(name="eureka-client",fallback=ConsumerFeignRollback.class)
 public interface ConsumerFeignClient {
-    /**
-     * 查询
-     * @return
-     */
     @GetMapping("dc")
     String getOne();
 }
