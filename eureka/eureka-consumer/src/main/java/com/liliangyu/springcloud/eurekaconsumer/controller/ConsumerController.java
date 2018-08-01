@@ -19,12 +19,17 @@ public class ConsumerController {
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
 
+    private Environment environment;
+
     @Autowired
-    Environment environment;
-    @GetMapping("dc")
+    public ConsumerController(Environment environment) {
+        this.environment = environment;
+    }
+
+    @GetMapping("/eurekaConsumer")
     public String getOne() {
         String property = environment.getProperty("server.port");
-        LOGGER.info("port:"+property);
-        return "client";
+        LOGGER.info("port:" + property);
+        return "eurekaConsumer";
     }
 }
