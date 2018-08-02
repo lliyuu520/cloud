@@ -15,19 +15,22 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class ConsumerController {
-    @Autowired
-    ConsumerFeignClient consumerFeignClient;
     /**
      * logger 日志
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
+    private ConsumerFeignClient consumerFeignClient;
+    private Environment environment;
 
     @Autowired
-    Environment environment;
+    public ConsumerController(ConsumerFeignClient consumerFeignClient, Environment environment) {
+        this.consumerFeignClient = consumerFeignClient;
+        this.environment = environment;
+    }
 
     @GetMapping("feign")
     public String getOne() {
-        LOGGER.info("environment"+environment.getProperty("server.port"));
+        LOGGER.info("environment" + environment.getProperty("server.port"));
         String one = consumerFeignClient.getOne();
         return one;
     }

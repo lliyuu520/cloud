@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description feignClient
  * @date 2018/7/31
  */
-@FeignClient("eureka-client")
+@FeignClient("eureka-consumer")
 public interface ConsumerFeignClient {
     /**
      * 查询
      * @return
      */
-    @GetMapping("dc")
+    @GetMapping("eurekaConsumer")
     String getOne();
 }
