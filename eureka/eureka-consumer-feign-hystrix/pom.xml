@@ -34,6 +34,7 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>eureka-consumer-feign-hystrix</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
