@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cloud-consumer-hystrix
+server:
+  port: 10026
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10010/cloud/
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true

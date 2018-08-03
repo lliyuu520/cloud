@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: cloud-turbine
+server:
+  port: 10026
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10010/cloud/
+turbine:
+  app-config: cloud-consumer,cloud-consumer-feign-hystrix
+  cluster-name-expression: "default"
+

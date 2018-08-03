@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cloud-server
+  boot:
+    admin:
+      url: http://localhost:10030
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10010/cloud/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true
+server:
+  port: 10010

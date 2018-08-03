@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cloud-consumer-feign
+server:
+  port: 10023
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10010/cloud/
