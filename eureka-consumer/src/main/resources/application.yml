@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-consumer
+    name: eureka-consumer
   boot:
     admin:
       url: http://localhost:10030
@@ -9,6 +9,6 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10010/cloud/
+      defaultZone: http://localhost:10010/eureka/
   instance:
     prefer-ip-address: true

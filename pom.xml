@@ -15,12 +15,15 @@
     <description>cloud</description>
     <modules>
         <module>eureka-server</module>
+        <module>eureka-provider-feign</module>
         <module>eureka-consumer</module>
         <module>eureka-consumer-hystrix</module>
         <module>eureka-consumer-feign</module>
         <module>eureka-consumer-feign-hystrix</module>
         <module>eureka-turbine</module>
         <module>spring-boot-admin</module>
+        <module>zipkin-server</module>
+        <module>eureka-consumer-zipkin</module>
     </modules>
 
 </project>
