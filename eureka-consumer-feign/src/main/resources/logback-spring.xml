@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property name="MODULE_NAME" value="eureka-consumer-feign"/>
-    <property name="LOG_PATH" value="/var/logs"/>
+    <property name="LOG_PATH" value="/var/log"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d [%t] %highlight%p %logger{0} %M %L - %m %n</pattern>
