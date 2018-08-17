@@ -1,6 +1,6 @@
 #!/bin/bash
 #这里可替换为你自己的执行程序，其他代码无需更改
-cd eureka/eureka-consumer-feign-hystrix/target
+cd eureka-consumer-feign-hystrix/target
 APP_NAME="cloud-consumer-feign-hystrix.jar"
 #使用说明，用来提示输入参数
 usage() {
@@ -25,7 +25,7 @@ start(){
   if [ $? -eq "0" ]; then
     echo "${APP_NAME} is already running. pid=${pid} ."
   else
-    nohup java -Xms128m -Xmx128m -jar $APP_NAME &
+    nohup java -Xms128m -Xmx128m -jar $APP_NAME >/dev/null &
   fi
 }
 
