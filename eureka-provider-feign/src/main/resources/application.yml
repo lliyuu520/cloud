@@ -1,6 +1,9 @@
 spring:
   application:
     name: eureka-provider-feign
+  boot:
+    admin:
+      url: http://localhost:10030
 server:
   port: 10020
 eureka:

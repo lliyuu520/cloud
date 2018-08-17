@@ -1,6 +1,5 @@
 package com.liliangyu.springcloud.cloud.controller.feign.hystrix;
 
-import com.liliangyu.springcloud.cloud.feign.client.ConsumerFeignClient;
 import com.liliangyu.springcloud.cloud.feign.client.ConsumerFeignHystrixClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,24 +22,15 @@ public class ConsumerController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
 
     private ConsumerFeignHystrixClient consumerFeignHystrixClient;
-    private ConsumerFeignClient consumerFeignClient;
 
     @Autowired
-    public ConsumerController(ConsumerFeignHystrixClient consumerFeignHystrixClient, ConsumerFeignClient consumerFeignClient) {
+    public ConsumerController(ConsumerFeignHystrixClient consumerFeignHystrixClient) {
         this.consumerFeignHystrixClient = consumerFeignHystrixClient;
-        this.consumerFeignClient = consumerFeignClient;
     }
 
     @GetMapping("consumerFeign")
     public String getOne() {
         LOGGER.info(LocalDateTime.now().toString());
         return consumerFeignHystrixClient.getOne();
-    }
-
-    @GetMapping("consumerFeignHystrix")
-    public String getOne1() {
-        LOGGER.info(LocalDateTime.now().toString());
-        return consumerFeignClient.getOne();
-
     }
 }
