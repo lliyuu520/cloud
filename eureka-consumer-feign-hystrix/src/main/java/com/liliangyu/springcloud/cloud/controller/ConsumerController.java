@@ -1,4 +1,4 @@
-package com.liliangyu.springcloud.cloud.controller.feign.hystrix;
+package com.liliangyu.springcloud.cloud.controller;
 
 import com.liliangyu.springcloud.cloud.feign.client.ConsumerFeignHystrixClient;
 import org.slf4j.Logger;

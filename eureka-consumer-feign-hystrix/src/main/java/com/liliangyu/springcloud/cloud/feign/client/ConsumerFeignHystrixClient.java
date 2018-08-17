@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description feignClient
  * @date 2018/7/31
  */
-@FeignClient(name = "cloud-consumer-hystrix", fallbackFactory = ConsumerFallbackFactory.class)
+@FeignClient(name = "eureka-provider-feign", fallbackFactory = ConsumerFallbackFactory.class)
 public interface ConsumerFeignHystrixClient {
     /**
      * 调用feign接口
      * @return
      */
-    @GetMapping("eurekaConsumerHystrix")
+    @GetMapping("/provider")
     String getOne();
 
     @Component
