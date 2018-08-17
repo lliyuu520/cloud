@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date 2018/7/31
  */
 @FeignClient("eureka-consumer")
-public interface ConsumerFeignClient {
+public interface ConsumerZipkinFeignClient {
     /**
      * 查询
      * @return

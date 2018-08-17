@@ -1,6 +1,6 @@
 package com.liliangyu.springcloud.cloud.controller;
 
-import com.liliangyu.springcloud.cloud.feign.client.ConsumerFeignClient;
+import com.liliangyu.springcloud.cloud.feign.client.ConsumerZipkinFeignClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/7/31
  */
 @RestController
-public class ConsumerController {
+public class ConsumerZipkinController {
     /**
      * logger 日志
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerController.class);
-    private ConsumerFeignClient consumerFeignClient;
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerZipkinController.class);
+    private ConsumerZipkinFeignClient consumerFeignClient;
 
     @Autowired
-    public ConsumerController(ConsumerFeignClient consumerFeignClient) {
+    public ConsumerZipkinController(ConsumerZipkinFeignClient consumerFeignClient) {
         this.consumerFeignClient = consumerFeignClient;
     }
 
