@@ -4,6 +4,11 @@ spring:
   boot:
     admin:
       url: http://localhost:10030
+  zipkin:
+    base-url: http://localhost:10050
+  sleuth:
+    sampler:
+      percentage: 1.0
 server:
   port: 10025
 eureka:
