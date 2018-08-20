@@ -1,6 +1,9 @@
 spring:
   application:
     name: eureka-consumer-feign-hystrix
+  boot:
+    admin:
+      url: http://localhost:10030
 server:
   port: 10025
 eureka:
