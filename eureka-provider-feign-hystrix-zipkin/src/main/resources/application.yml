@@ -1,15 +1,17 @@
 spring:
   application:
-    name: eureka-consumer-feign-zipkin
+    name: eureka-provider-feign-hystrix-zipkin
+  boot:
+    admin:
+      url: http://localhost:10011
   zipkin:
-    base-url: http://zipkin-server/
+    base-url: http://localhost:10012
   sleuth:
     sampler:
       percentage: 1.0
 server:
-  port: 10027
+  port: 10021
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:10010/eureka/
-

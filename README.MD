@@ -1,3 +1,9 @@
 |服务|端口|
-|:----:|:-----:|
+|:----|:-----:|
 |eureka-server|10010|
+|spring-boot-admin|10011|
+|zipkin-server|10012|
+|eureka-provider-feign|10020|
+|eureka-provider-feign-hystrix-zipkin|10021|
+|eureka-consumer-feign-hystrix|10030|
+|eureka-consumer-feign-hystrix-zipkin|10031|

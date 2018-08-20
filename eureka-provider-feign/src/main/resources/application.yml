@@ -3,12 +3,7 @@ spring:
     name: eureka-provider-feign
   boot:
     admin:
-      url: http://localhost:10030
-  zipkin:
-    base-url: http://localhost:10050
-  sleuth:
-    sampler:
-      percentage: 1.0
+      url: http://localhost:10011
 server:
   port: 10020
 eureka:

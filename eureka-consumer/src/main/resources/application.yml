@@ -3,7 +3,7 @@ spring:
     name: eureka-consumer
   boot:
     admin:
-      url: http://localhost:10030
+      url: http://localhost:10011
 server:
   port: 10021
 eureka:

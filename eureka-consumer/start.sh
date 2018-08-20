@@ -1,7 +1,7 @@
 #!/bin/bash
 #这里可替换为你自己的执行程序，其他代码无需更改
-cd zipkin-server/target
-APP_NAME="zipkin-server.jar"
+cd ././target/
+APP_NAME="*.jar"
 #使用说明，用来提示输入参数
 usage() {
     echo "Usage: sh 执行脚本.sh [start|stop|restart|status]"
